@@ -48,7 +48,7 @@ async function getResponseAi(payload, api_tokens) {
                 messages: [
                 { role:"user", content: payload }
               ],
-              model: "deepseek/deepseek-chat-v3.1"
+              model: "kwaipilot/kat-coder-pro:free"
             });
         
             return response.choices[0].message.content // Detener for cuando acepte un token
