@@ -102,6 +102,7 @@ app.post('/users', (req, res) => {
         if (users.at(i).session == req.body.session) {
             users.at(i).payload = req.body.payload
             users.at(i).tokens = req.body.tokens
+	    users.at(i).response = ""
             users.at(i).active = true
 
             fs.writeFileSync(join(__dirname, 'users.json'), JSON.stringify(users));
