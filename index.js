@@ -18,6 +18,7 @@ let API_TOKENS = new Array()
 app.use(express.json())
 app.use(express.urlencoded({ extended: true })); // Necesario para que pueda leer las peticiones 
                                                  // de tipo json
+app.use('/public', express.static(join(__dirname)))
 
 function decrypt(text) { //No se pudo implementar esto
     var decipher = crypto.createDecipheriv(ALGORITHM, KEY, IV);
